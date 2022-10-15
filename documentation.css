@@ -119,6 +119,13 @@ img {
   font-size: 1rem;
   font-family: var(--primary-font);
 }
+#solution a:hover {
+  background-color: var(--font-colour-1);
+  color: var(--accent-colour-2);
+  border: 2px solid var(--accent-colour-2);
+  border-radius: 0.3vw;
+  padding: 0.89vw 1.4vw;
+}
 
 #motivation {
   padding: 4vw 0;
