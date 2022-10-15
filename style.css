@@ -3,12 +3,16 @@
 :root {
   --primary-font: "Exo 2", sans-serif;
   --secondary-font: "Assistant", sans-serif;
-  --primary-colour-1: #eef4f7;
-  --primary-colour-2: #e7ecef;
-  --secondary-colour-1: #2f313b;
-  --secondary-colour-2: #22242d;
-  --accent-colour-1: #9cbed1;
-  --accent-colour-2: #036698;
+  --primary-colour-1: #c3c3c3;
+  --primary-colour-2: #aaaaaa;
+  --secondary-colour-1: #10222e;
+  --secondary-colour-2: #06141c;
+  --tertiare-colour: #222628;
+  --accent-colour-1: #300a8a;
+  --accent-colour-2: #830606;
+  --accent-colour-3: rgb(217, 217, 217);
+  --font-colour-1: rgb(241, 241, 241);
+  --font-colour-2: rgb(41, 41, 41);
 }
 
 /* Reset styling */
@@ -28,14 +32,14 @@ section {
 html {
   font-size: 112.5%;
   font-family: var(--secondary-font);
-  background-color: var(--primary-colour-1);
-  color: var(--secondary-colour-1);
+  background-color: var(--tertiare-colour);
+  color: var(--font-colour-1);
+  scroll-behavior: smooth;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-darker);
   font-family: var(--primary-font);
   color: var(--secondary-colour-2);
 }
@@ -64,7 +68,7 @@ p {
 
 /* Sectioned styling */
 nav {
-  background-color: var(--secondary-colour-1);
+  background-color: var(--secondary-colour-2);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -80,10 +84,11 @@ nav {
   text-decoration: none;
   font-weight: 700;
   font-size: 2rem;
+  color: var(--font-colour-1);
 }
 nav button {
   background-color: var(--accent-colour-2);
-  color: var(--primary-colour-2);
+  color: var(--font-colour-1);
   border: none;
   padding: 1vw 1.5vw;
   border-radius: 0.2vw;
@@ -104,28 +109,28 @@ nav a {
 }
 
 header {
-  background-image: url(assets/pexels-tim-mossholder-3213357.jpg);
+  background-image: url(assets/pexels-karol-d-841228.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   justify-content: space-evenly;
-  /* height: 70vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3vw 5vw;
+  box-shadow: inset 0px 10px 10px -5px var(--accent-colour-1), inset 0px -10px 10px -5px var(--accent-colour-1);
 }
 .header_text {
   width: 90%;
   margin: 2vw 0;
   font-weight: 600;
-  color: var(--primary-colour-2);
+  color: var(--font-colour-1);
   display: flex;
   flex-direction: column;
 }
 header button {
   background-color: var(--accent-colour-2);
-  color: var(--primary-colour-2);
+  color: var(--font-colour-1);
   border: none;
   padding: 2.5vw;
   border-radius: 0.2vw;
@@ -134,38 +139,45 @@ header button {
   margin-top: 3vw;
 }
 .header_text h1 {
-  color: var(--primary-colour-1);
+  color: var(--font-colour-1);
+}
+header h1 {
+  color: var(--font-colour-1);
 }
 
 .header_graphics {
-  background-image: url(assets/pexels-eberhard-grossgasteiger-1287145.jpg);
+  background-image: url(assets/pexels-lil-artsy-1111597.jpg);
   background-size: cover;
-  box-shadow: 1px 1px 10px var(--accent-colour-2);
+  box-shadow: 1px 1px 10px 2px var(--accent-colour-1);
   border-radius: 100%;
   width: 50vw;
   aspect-ratio: 1/1;
   order: -2;
 }
 
-#advantages {
+#projects {
   padding: 2vw 0;
 }
 
-.advantages_cards {
+#projects h2 {
+  color: var(--font-colour-1);
+}
+
+.projects_cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 3vw;
 }
-.advantages_card {
+.projects_card {
   display: flex;
   max-width: 80%;
   flex-direction: column;
   border-radius: 0.5vw;
-  background-color: var(--accent-colour-1);
-  box-shadow: 3px 3px 10px rgb(183, 183, 183);
+  background-color: var(--accent-colour-3);
+  box-shadow: 3px 3px 10px var(--accent-colour-1);
 }
-.advantages_card_graphics {
+.projects_card_graphics {
   width: 100%;
   height: 30vw;
   overflow: hidden;
@@ -173,52 +185,73 @@ header button {
   object-position: center;
   border-radius: 0.5vw 0.5vw 0 0;
 }
-.advantages_card_text {
+.projects_card_text {
   padding: 3vw;
+  color: var(--font-colour-2);
 }
-.advantages_card_text h3 {
+.projects_card_text h3 {
   overflow: hidden;
   height: 7vw;
+  color: var(--font-colour-2);
+}
+.link_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 0 4vw;
 }
 
-#product {
-  padding: 4% 0;
+#about {
+  background-color: var(--secondary-colour-2);
+  margin: 0;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3vw;
 }
-.product_graphics {
-  background-image: url("https://picsum.photos/600");
-  align-self: center;
+#about h2 {
+  color: var(--font-colour-1);
+  padding: 0 6vw;
+  padding-bottom: 1vw;
+}
+.about_graphics {
+  box-shadow: 0px 0px 15px 5px var(--accent-colour-1), inset 0px 0px 20px 2px rgba(0, 0, 0, 1);
   width: 50vw;
   height: 50vw;
   object-fit: cover;
   object-position: center;
+  align-self: center;
   border-radius: 100%;
-  box-shadow: 1px 1px 10px var(--accent-colour-2);
+  background-image: url("assets/20220509_140237\ -\ Copy.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.product_text {
+.about_text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  row-gap: 3vw;
+  align-items: center;
 }
 
-.product_text article {
-  max-width: 100%;
+.about_text article {
+  max-width: 90%;
   padding: 1vw 1vw;
+  background-color: var(--primary-colour-2);
+  border-radius: 0.5vw;
+  color: var(--font-colour-2);
 }
 
-.highlight {
-  background-color: var(--secondary-colour-2);
-  padding: 4vw 6vw;
-  margin: 0;
+.skill {
   display: flex;
   flex-direction: column;
+  padding: 3vw 4vw;
 }
-.highlight h2 {
-  color: var(--primary-colour-1);
+.skill h2 {
+  color: var(--font-colour-1);
 }
-.highlight_small_cards {
+.skill_small_cards {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -226,17 +259,24 @@ header button {
   margin: auto;
   align-items: center;
 }
-.highlight_small_cards div {
-  background-color: var(--primary-colour-1);
+
+.skill_small_cards div {
+  background-color: var(--accent-colour-3);
   border-radius: 0.5vw;
   padding: 4vw 3vw;
   margin: 5vw 0;
-  width: 50%;
+  width: 60%;
+  color: var(--font-colour-2);
+  box-shadow: 3px 3px 15px var(--accent-colour-1);
 }
 
-.highlight button {
+.skill_small_cards ul {
+  padding-left: 3vw;
+}
+
+.skill button {
   background-color: var(--accent-colour-2);
-  color: var(--primary-colour-2);
+  color: var(--font-colour-1);
   border: none;
   padding: 1.5vw 2vw;
   border-radius: 0.2vw;
@@ -245,88 +285,20 @@ header button {
   font-family: var(--primary-font);
   align-self: flex-end;
 }
-
-#team {
-  display: flex;
-  flex-direction: column;
-  column-gap: 2vw;
-  padding: 3vw 0;
-  margin: 0 3vw;
-  row-gap: 3vw;
-}
-#team h2 {
-  grid-column: 1 / span 2;
-}
-#team article {
-  margin: auto;
-  width: 90vw;
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: var(--accent-colour-1);
-  padding: 2vw;
-  align-items: center;
-  border-radius: 0.5vw;
-}
-#team ul {
-  list-style: none;
-}
-.team_text {
-  width: 80%;
-}
-
-.team_graphics {
-  width: 30vw;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  border-radius: 100%;
-  /* border: var(--accent-colour-1) 5px solid; */
-  box-shadow: 1px 1px 10px var(--accent-colour-2);
-}
 img {
   max-width: 100%;
   object-fit: cover;
   object-position: 0 -3vw;
 }
 
-#contact {
-  background-color: var(--accent-colour-2);
-  color: var(--primary-colour-2);
+#conclusion {
+  background-color: var(--accent-colour-1);
+  color: var(--font-colour-1);
   margin: 0;
   padding: 3vw;
 }
-
-#contact form {
-  max-width: 100%;
-  margin: auto;
-  column-gap: 2vw;
-  font-size: 1rem;
-  font-family: var(--primary-font);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80vw;
-}
-#contact h2 {
-  color: var(--primary-colour-1);
-}
-#contact input {
-  width: 100%;
-  height: 7vw;
-}
-#contact .form_group:nth-of-type(3) textarea {
-  width: 100%;
-  height: 30vw;
-}
-#contact .form_group:last-of-type button {
-  background-color: var(--secondary-colour-1);
-  color: var(--primary-colour-2);
-  border: none;
-  margin-top: 1.5vw;
-  padding: 1.5vw 3vw;
-  border-radius: 0.2vw;
-  max-width: 50vw;
-  font-size: 1rem;
-  font-family: var(--primary-font);
+#conclusion h2 {
+  color: var(--font-colour-1);
 }
 footer {
   background-color: var(--secondary-colour-2);
@@ -334,22 +306,15 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   padding: 3vw 5vw;
-  color: var(--primary-colour-2);
+  color: var(--font-colour-1);
   align-items: center;
 }
 footer h2,
 footer h3 {
-  color: var(--primary-colour-1);
+  color: var(--font-colour-1);
 }
 footer a {
-  color: var(--primary-colour-2);
-}
-
-footer section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
+  color: var(--font-colour-1);
 }
 
 footer ul {
@@ -360,74 +325,43 @@ footer ul {
   footer {
     flex-direction: row;
   }
-  footer section {
-    width: 25%;
-  }
-  #contact form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 80%;
-    font-size: 1.2rem;
-    height: 100%;
-  }
-  #contact .form_group:nth-of-type(3) {
-    grid-column: 1 / span 2;
-  }
-  #contact .form_group:last-of-type {
-    grid-column: 2;
-    justify-self: end;
-  }
-  #contact input {
-    height: 4vw;
-  }
-  #team h2 {
-    grid-column: 1 / span 2;
-  }
-  .team_text {
-    width: 60%;
-  }
-  .team_graphics {
-    width: 18vw;
-  }
-  .highlight_small_cards {
+  .skill_small_cards {
     flex-direction: row;
     width: 60vw;
   }
-  .highlight_small_cards div {
+  .skill_small_cards div {
     padding: 2vw;
-    width: 25vw;
+    width: 20vw;
   }
-  #product {
+  #about {
     padding: 4% 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   }
-  #product h2 {
+  #about h2 {
     grid-column: 1 / span 2;
   }
-  .product_graphics {
+  .about_graphics {
     width: 37vw;
     height: 37vw;
     justify-self: center;
   }
-  .advantages_cards {
+  .projects_cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
     row-gap: 3vw;
   }
-  .advantages_card {
+  .projects_card {
     display: flex;
     max-width: 80%;
     flex-direction: column;
     border-radius: 0.5vw;
-    background-color: var(--accent-colour-1);
-    box-shadow: 3px 3px 10px rgb(183, 183, 183);
   }
-  .advantages_card_text h3 {
+  .projects_card_text h3 {
     overflow: hidden;
     height: 5vw;
   }
-  .advantages_card_graphics {
+  .projects_card_graphics {
     width: 100%;
     height: 13vw;
     overflow: hidden;
@@ -462,38 +396,50 @@ footer ul {
   }
 }
 @media screen and (min-width: 1101px) {
-  #team article {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 0.5vw;
-  }
-  #team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-  }
-  #contact input {
-    height: 2vw;
-  }
-  #contact .form_group:nth-of-type(3) textarea {
-    width: 100%;
-    height: 15vw;
-  }
-  .product_graphics {
+  .about_graphics {
     width: 35vw;
     height: 35vw;
   }
-  .advantages_cards {
+  .projects_cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+  .projects_card {
+    margin: auto;
+  }
+  .projects_card_text {
+    padding: 1.2vw;
+    height: 10vw;
+    overflow: hidden;
+  }
+  .projects_card_text h3 {
+    overflow: hidden;
+    height: 2vw;
   }
   header button {
-    max-width: 15vw;
+    max-width: 13vw;
+    padding: 1vw;
   }
   .header_text {
     width: 40%;
   }
   nav {
     height: 4vw;
+  }
+}
+
+/* Keyframes */
+.fadeInAnimation {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

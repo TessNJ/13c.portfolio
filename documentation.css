@@ -1,0 +1,93 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+/* Root */
+h1,
+h2,
+h3 {
+  font-family: var(--primary-font);
+  color: var(--font-colour-1);
+}
+
+h1 {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h2 {
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5rem;
+  margin: 5px 0 10px 0;
+}
+
+/* Sectioned styling */
+header {
+  background-image: url(assets/Mockup_13c.01.02.png);
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 0 -3vw;
+}
+
+#mockups {
+  padding: 4vw 0;
+}
+
+.mockups_graphics {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2vw;
+}
+.mockups_graphics div {
+  border-radius: 0.5vw;
+}
+.mockups_graphics img {
+  max-width: 100%;
+  max-height: 100vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5vw;
+  box-shadow: 0px 0px 10px 5px var(--accent-colour-1);
+}
+#visual_details {
+  padding: 4vw 3vw;
+  margin: 0;
+  background-color: var(--primary-colour-1);
+  color: var(--font-colour-2);
+}
+#visual_details h2 {
+  color: var(--font-colour-2);
+}
+
+#solution {
+  padding: 4vw 0;
+}
+#solution div {
+  margin: auto;
+}
+
+#motivation {
+  padding: 4vw 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mockups_graphics {
+    flex-direction: row;
+  }
+  .mockups_graphics img {
+    max-height: 40vw;
+  }
+}
+@media screen and (min-width: 1101px) {
+}
