@@ -52,6 +52,7 @@ img {
   padding: 4vw 5vw;
   margin: 0;
   background-color: var(--secondary-colour-2);
+  opacity: 0;
 }
 
 .mockups_graphics {
@@ -73,6 +74,7 @@ img {
 
 #visual_details {
   padding: 4vw 0;
+  opacity: 0;
 }
 .details {
   display: flex;
