@@ -176,6 +176,7 @@ header h1 {
 
 #projects {
   padding: 2vw 0;
+  opacity: 0;
 }
 
 #projects h2 {
